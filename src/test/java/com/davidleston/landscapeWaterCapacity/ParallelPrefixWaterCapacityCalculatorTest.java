@@ -1,13 +1,13 @@
 package com.davidleston.landscapeWaterCapacity;
 
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
 
 import java.math.BigInteger;
 import java.util.Random;
 
 import static com.davidleston.landscapeWaterCapacity.ParallelPrefixWaterCapacityCalculator.fromHeights;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public final class ParallelPrefixWaterCapacityCalculatorTest {
 
@@ -46,9 +46,9 @@ public final class ParallelPrefixWaterCapacityCalculatorTest {
         assertEquals(BigInteger.valueOf(2), fromHeights(1, 2, 1, 1, 2, 1));
     }
 
-    @Ignore("Used to measure performance during development")
+    @Disabled("Used to measure performance during development")
     @Test
-    public void perf() {
+    public void performance() {
         Random random = new Random(1);
         long[] heights = new long[100_000_000];
         for (int i = 0; i < heights.length; i++) {
